@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Ahmad · heavy portfolio</title>
+    <!-- Font Awesome 6 (free) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0b0c10;
+            font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #eaeef2;
+            scroll-behavior: smooth;
+        }
+
+        /* heavy industrial vibe — but polished */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        /* header / nav */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 0;
+            border-bottom: 3px solid #2a2f35;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            background: linear-gradient(145deg, #ffffff, #b0b9c9);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-transform: uppercase;
+        }
+
+        .logo span {
+            color: #ff3c3c;
+            background: none;
+            -webkit-background-clip: unset;
+            background-clip: unset;
+            font-weight: 900;
+            font-size: 2.5rem;
+            text-shadow: 0 0 8px rgba(255, 60, 60, 0.6);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 600;
+            color: #cbd5e1;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            transition: 0.2s;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 4px;
+        }
+
+        .nav-links a:hover {
+            color: #ff4d4d;
+            border-bottom-color: #ff4d4d;
+        }
+
+        /* hero section — heavy intro */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 60px 0 80px;
+        }
+
+        .hero-content {
+            flex: 1 1 350px;
+        }
+
+        .hero-content .greet {
+            font-size: 1.5rem;
+            color: #9aa9b9;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .hero-content .name {
+            font-size: 4.5rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin: 15px 0 10px;
+            text-transform: uppercase;
+            background: linear-gradient(120deg, #ffffff 20%, #ff8a8a, #ff3c3c);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 4px 4px 0 #1f2329;
+        }
+
+        .hero-content .title {
+            font-size: 2rem;
+            font-weight: 500;
+            color: #e0e7ff;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .title i {
+            color: #ff5e5e;
+            font-size: 2.2rem;
+        }
+
+        .hero-desc {
+            font-size: 1.2rem;
+            max-width: 550px;
+            color: #b3c2d1;
+            border-left: 6px solid #ff4d4d;
+            padding-left: 25px;
+            margin: 30px 0;
+        }
+
+        .heavy-tag {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .heavy-tag span {
+            background: #20252b;
+            padding: 8px 22px;
+            border-radius: 40px;
+            font-weight: 700;
+            color: #ffc9c9;
+            border: 1px solid #ff5e5e;
+            font-size: 1.1rem;
+            box-shadow: 0 0 12px rgba(255, 70, 70, 0.3);
+        }
+
+        .hero-image {
+            flex: 1 1 300px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .image-frame {
+            width: 340px;
+            height: 340px;
+            background: linear-gradient(145deg, #262e38, #0f1217);
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.8), inset 0 0 0 3px #ff3c3c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .image-frame i {
+            font-size: 14rem;
+            color: #ccddee;
+            text-shadow: 8px 8px 0 #2f353d, 0 0 20px #ff3c3c;
+        }
+
+        /* section heading style */
+        .section-head {
+            font-size: 2.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin: 60px 0 40px;
+            display: inline-block;
+            border-bottom: 8px solid #ff3c3c;
+            padding-bottom: 8px;
+            letter-spacing: 2px;
+            color: #ffffff;
+        }
+
+        .section-head i {
+            color: #ff5e5e;
+            margin-right: 15px;
+        }
+
+        /* work / projects grid — heavy cards */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .project-card {
+            background: #14181e;
+            border: 2px solid #2f363f;
+            border-radius: 30px;
+            padding: 30px 20px;
+            transition: 0.25s ease;
+            box-shadow: 0 15px 20px -10px rgba(0, 0, 0, 0.7);
+            text-align: center;
+        }
+
+        .project-card:hover {
+            border-color: #ff3c3c;
+            transform: scale(1.02) translateY(-8px);
+            background: #1b2128;
+            box-shadow: 0 0 30px #ff3c3c44;
+        }
+
+        .project-icon {
+            font-size: 3.5rem;
+            color: #ff4d4d;
+            margin-bottom: 20px;
+        }
+
+        .project-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #fff;
+            font-weight: 700;
+        }
+
+        .project-card p {
+            color: #aab7c9;
+            font-weight: 500;
+            font-size: 1.05rem;
+        }
+
+        .heavy-badge {
+            display: inline-block;
+            margin-top: 20px;
+            background: #2b333d;
+            padding: 5px 18px;
+            border-radius: 30px;
+            color: #ffb8b8;
+            font-weight: 600;
+            border: 1px solid #ff6a6a;
+        }
+
+        /* skills section — brutal but clean */
+        .skills-container {
+            background: #11161c;
+            border-radius: 60px;
+            padding: 40px 40px;
+            border: 3px solid #292f37;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px 40px;
+            margin: 30px 0 20px;
+        }
+
+        .skill-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: #1e242b;
+            padding: 12px 30px;
+            border-radius: 60px;
+            font-size: 1.4rem;
+            font-weight: 600;
+            border: 1px solid #4b525c;
+            transition: 0.1s linear;
+            box-shadow: 5px 5px 0 #0b0b0e;
+        }
+
+        .skill-item i {
+            color: #ff4f4f;
+            font-size: 1.9rem;
+        }
+
+        .skill-item:hover {
+            border-color: #ff5959;
+            background: #252e38;
+        }
+
+        /* about / quote */
+        .about-heavy {
+            display: flex;
+            background: #0f1319;
+            padding: 40px 30px;
+            border-radius: 50px;
+            border: 3px solid #ff3c3c36;
+            margin: 50px 0;
+            align-items: center;
+            gap: 35px;
+            flex-wrap: wrap;
+        }
+
+        .about-heavy i {
+            font-size: 4.5rem;
+            color: #ff5e5e;
+        }
+
+        .about-text {
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: #d2def0;
+            flex: 1;
+        }
+
+        .about-text strong {
+            color: #ff5e5e;
+            font-weight: 800;
+        }
+
+        /* contact strip — bold */
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            background: #12171e;
+            padding: 30px 30px;
+            border-radius: 80px;
+            margin: 50px 0 30px;
+            border: 2px solid #3c4550;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.4rem;
+            background: #1f262f;
+            padding: 10px 30px;
+            border-radius: 60px;
+            transition: all 0.2s;
+            border: 1px solid #5b6674;
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+        }
+
+        .contact-item i {
+            color: #ff4d4d;
+            font-size: 2rem;
+        }
+
+        .contact-item:hover {
+            background: #2c3541;
+            border-color: #ff4d4d;
+            transform: scale(1.05);
+            box-shadow: 0 0 18px #ff4d4d;
+        }
+
+        /* footer */
+        .footer {
+            text-align: center;
+            padding: 35px 0 30px;
+            border-top: 3px solid #2f363f;
+            font-size: 1.15rem;
+            color: #8f9fb1;
+            margin-top: 40px;
+        }
+
+        .footer span {
+            color: #ff5e5e;
+            font-weight: 700;
+        }
+
+        /* responsiveness */
+        @media (max-width: 700px) {
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .hero-content .name {
+                font-size: 3.2rem;
+            }
+            .hero-image .image-frame {
+                width: 250px;
+                height: 250px;
+            }
+            .image-frame i {
+                font-size: 10rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- navigation -->
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo">
+                muhammad<span>.</span>ahmad<span>🔥</span>
+            </div>
+            <div class="nav-links">
+                <a href="#">WORK</a>
+                <a href="#">STACK</a>
+                <a href="#">RESUME</a>
+                <a href="#">CONTACT</a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- hero section -->
+    <div class="container">
+        <div class="hero">
+            <div class="hero-content">
+                <div class="greet"><i class="fas fa-bolt" style="color:#ff4d4d;"></i> heavy design · heavy code</div>
+                <h1 class="name">Muhammad Ahmad</h1>
+                <div class="title">
+                    <i class="fas fa-crown"></i>  THE HEAVYWEIGHT <i class="fas fa-dumbbell"></i>
+                </div>
+                <p class="hero-desc">
+                    Architect of bold digital experiences. I build industrial-grade web applications with a premium feel. Every line of code carries weight.
+                </p>
+                <div class="heavy-tag">
+                    <span>REACT · NODE</span>
+                    <span>NEXT.JS</span>
+                    <span>UI/XX</span>
+                    <span>FULLSTACK</span>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-frame">
+                    <i class="fas fa-user-astronaut"></i>  <!-- heavy icon representation -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- work / projects section (heavy stuff) -->
+    <div class="container">
+        <h2 class="section-head"><i class="fas fa-briefcase"></i> heavy projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <i class="fas fa-cloud-sun-rain project-icon"></i>
+                <h3>STEELFRAME</h3>
+                <p>Analytics dashboard for structural engineering. Real-time load monitoring.</p>
+                <span class="heavy-badge">react · d3</span>
+            </div>
+            <div class="project-card">
+                <i class="fas fa-robot project-icon"></i>
+                <h3>IRONCLAD AI</h3>
+                <p>Heavy automation suite for industrial IOT with edge inference.</p>
+                <span class="heavy-badge">tensorflow · rust</span>
+            </div>
+            <div class="project-card">
+                <i class="fas fa-gamepad project-icon"></i>
+                <h3>BATTLEAXE</h3>
+                <p>Multiplayer game backend handling 10k concurrent heavy sessions.</p>
+                <span class="heavy-badge">go · unity</span>
+            </div>
+            <div class="project-card">
+                <i class="fas fa-layer-group project-icon"></i>
+                <h3>FORGE STUDIO</h3>
+                <p>Design system built for high‑impact brands. Used by 100+ teams.</p>
+                <span class="heavy-badge">figma · storybook</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- skills & tools - heavy section -->
+    <div class="container">
+        <h2 class="section-head"><i class="fas fa-cog"></i> heavy stack</h2>
+        <div class="skills-container">
+            <div class="skill-item"><i class="fab fa-react"></i> React</div>
+            <div class="skill-item"><i class="fab fa-node-js"></i> Node.js</div>
+            <div class="skill-item"><i class="fas fa-database"></i> MongoDB</div>
+            <div class="skill-item"><i class="fab fa-python"></i> Python</div>
+            <div class="skill-item"><i class="fas fa-bolt"></i> Next.js</div>
+            <div class="skill-item"><i class="fab fa-aws"></i> AWS</div>
+            <div class="skill-item"><i class="fas fa-code"></i> TypeScript</div>
+            <div class="skill-item"><i class="fas fa-cubes"></i> WebAssembly</div>
+        </div>
+    </div>
+
+    <!-- about / quote + name repetition (muhammad ahmad) heavy -->
+    <div class="container">
+        <div class="about-heavy">
+            <i class="fas fa-quote-right"></i>
+            <div class="about-text">
+                <strong>Muhammad Ahmad</strong> doesn't just build websites — he builds <strong>digital monuments</strong>. Every interface is robust, every interaction carries weight. With over 8 years of heavy engineering, his work speaks louder than hype.
+            </div>
+        </div>
+    </div>
+
+    <!-- contact line - heavy presence -->
+    <div class="container">
+        <h2 class="section-head"><i class="fas fa-thunderstorm"></i> contact the heavy</h2>
+        <div class="contact-links">
+            <a href="#" class="contact-item"><i class="fab fa-github"></i> /ahmad-heavy</a>
+            <a href="#" class="contact-item"><i class="fab fa-linkedin"></i> muhammad-ahmad</a>
+            <a href="#" class="contact-item"><i class="fas fa-envelope"></i> ahmad@heavy.dev</a>
+            <a href="#" class="contact-item"><i class="fas fa-phone-alt"></i> +1 800 HEAVY</a>
+        </div>
+    </div>
+
+    <!-- footer — one more time the name -->
+    <div class="container">
+        <div class="footer">
+            <i class="fas fa-trademark"></i> 2025 · <span>MUHAMMAD AHMAD</span> (heavy industries) <br>
+            made with <span>🔥</span> and pure <span>CSS</span>
+        </div>
+    </div>
+
+    <!-- tiny extra style for name prominence (inline fine) -->
+    <div style="height: 10px;"></div>
+</body>
+</html>
